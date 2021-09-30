@@ -1,0 +1,191 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+/**
+ * @author  Gregg Moore, findmoxie.com
+ * @package \System\Application\
+ * copyright Copyright (c) 2016, MOXIE.COM
+ */
+
+// ------------------------------------------------------------------------
+
+class Users_m extends CI_Model
+{
+	
+	protected $_users = 'users';
+	protected $_users_groups = 'users_groups';
+	protected $_groups = 'groups';
+	protected $_user_call_meta = 'user_call_meta';
+	protected $_user_email_meta = 'user_email_meta';
+	protected $_user_inquiry_meta = 'user_inquiry_meta';
+	protected $_user_notes_meta = 'user_notes_meta';
+	
+	function __construct()
+	{
+		parent::__construct();
+		
+	}
+	
+	
+	
+	public function get_all()
+	{
+
+		/**
+		$this->db->distinct();
+		$this->db->select('u.id, u.email, u.first_name, u.fullname, u.last_name, u.mobile, u.phone, u.created_on, u.modified_ts');
+		$this->db->from($this->_users.' as u');
+		$this->db->join('users_groups as ug', 'ug.user_id = u.id');
+		$this->db->where_in('ug.group_id', 1);
+		$this->db->order_by('u.last_name', 'desc'); 
+		**/
+		$this->db->select();
+		$this->db->from($this->_users);
+		$this->db->order_by('last_name', 'desc'); 
+		$query = $this->db->get();
+
+		//make sure results exist
+	    if($query->num_rows() > 0) {
+	        
+	        $data = NULL ;
+	        $modals = NULL ;
+	        $inquiry_count = NULL ;
+	        $call_count = NULL ;
+	        $note_count = NULL;
+	        $email_count = NULL;
+
+	        foreach($query->result() as $r)
+	        {
+	        	$ugroups = NULL;
+	        	$groups = $this->ion_auth->get_users_groups($r->id)->result();
+	        		        	
+	        	if(!empty($groups))
+	        	{
+		        	foreach($groups as $ug)
+		        	{
+
+			        	$ugroups .= '<span class="ug btn btn-xs '.$ug->color.'">'.$ug->alt_name.'</span>';
+		        	}
+	        	}
+	        	
+	        		$secondary_phone = $r->phone ? $r->phone : '' ;
+						$primary_phone = $r->mobile ? $r->mobile : $secondary_phone ;	        	
+	        	
+	        	/**
+		        	$inquiry_count = $this->user_meta_count($r->id, $this->_user_inquiry_meta);
+	        	$call_count = $this->user_meta_count($r->id, $this->_user_call_meta);
+	        	$email_count = $this->user_meta_count($r->id, $this->_user_email_meta);
+	        	$note_count = $this->user_meta_count($r->id, $this->_user_notes_meta);
+	        	**/
+	        	
+	        	$data .= '
+	        	<tr id="row_'.$r->id.'">
+					
+					<td>
+						<a href="/admin/users/edit/'.$r->id.'"><strong>'.$r->fullname.'</strong></a>
+					</td>
+					<td>'.$ugroups.'</td>
+					<td>'.$r->email.'</td>
+					<td>
+						<ul class="table-options">
+							<li><a class="remove text-center" href="#myModal" data-toggle="modal" data-id="'.$r->id.'" data-title="'.$r->fullname.'" data-target="#myModal"><i class="fa fa-trash confirm-delete"></i></a></li>
+						</ul>
+					</td>
+				</tr>';
+	        }
+	        	        
+	        return $data;
+	        
+	    }
+	    
+	    return FALSE ;
+	}
+	
+	
+	function check_username($username = NULL)
+	{
+		
+		$this->db->select('username');
+		$this->db->from($this->_users);
+		$this->db->where('username', $username);
+		
+		$query = $this->db->get();
+		if($query->num_rows() > 0)
+		{
+			return TRUE;
+		}
+		
+		return FALSE;
+	}
+	
+	function check_uri($uri = NULL)
+	{
+		
+		$this->db->select('uri');
+		$this->db->from($this->_users);
+		$this->db->where('uri', $uri);
+		
+		$query = $this->db->get();
+		if($query->num_rows() > 0)
+		{
+			return TRUE;
+		}
+		
+		return FALSE;
+	}
+	
+	
+	public function groups()
+	{
+		$this->db->select('id, alt_name');
+		$this->db->from('groups');
+		$this->db->order_by('id');
+		$query = $this->db->get();
+		if($query->num_rows() > 0)
+		{
+			$data = array();
+			foreach($query->result_array() as $r)
+			{
+				
+				$data[$r['id']] = $r['alt_name'];
+			}
+			
+			return $data;
+		}
+	}
+	
+	public function users_groups($id)
+	{
+		$id || $id = $this->session->userdata('user_id');
+		$this->db->select('group_id as id');
+		$this->db->from('users_groups');
+		$this->db->where(array('user_id' => $id));
+		$query = $this->db->get();
+		
+		if($query->num_rows() > 0)
+		{
+			$data = array();
+			foreach($query->result_array() as $r)
+			{
+				$data[] = $r['id'];
+			}
+			
+			return $data;
+		}
+		
+		return FALSE;
+		
+	}
+	
+	
+	public function get_count($group_id = '')
+	{
+		$this->db->select('u.id');
+		$this->db->from($this->_users.' AS u');
+		$this->db->join($this->_users_groups.' AS ug', 'ug.user_id = u.id');
+		$this->db->where(array('u.active' => 1, 'ug.group_id' => $group_id));
+		$query = $this->db->get();
+		
+		return $query->num_rows();
+	}
+
+}

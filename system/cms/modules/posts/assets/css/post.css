@@ -1,0 +1,20 @@
+#moo-blog {
+	padding-top: 15rem;
+}
+
+.header_top {
+	background-color: rgba(1,103,154, 0.7);
+	
+}
+
+.header_bottom {
+	border-top-color: rgba(1,103,154, 1);
+}
+
+.navbar {
+	background-color: rgba(1,103,154, 1);
+}
+
+span.date {
+	color: #104E8b;
+}

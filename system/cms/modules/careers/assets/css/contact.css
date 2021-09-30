@@ -1,0 +1,25 @@
+.page-mod-telephone {
+	margin-top: 1rem;
+}
+
+.page-mod-telephone a {
+	font-size: 3em;
+	color: #008ED3;
+	font-weight: bold;
+}
+
+.help-block {
+	color: #cc0000 ;
+}
+
+.btn-primary {
+	margin-top: 20px;
+}
+/*-----------------------------------------------
+  MAP
+----------------------------------------------- */
+
+#location-map {
+	padding: 0;
+	margin: 0;
+}

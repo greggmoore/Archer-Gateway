@@ -1,0 +1,34 @@
+body {
+	background: #2c3a50 url("/system/cms/modules/themes/default/assets/images/background-blur.jpg") no-repeat fixed left bottom / cover ;
+	/** filter: blur(5px); **/
+}
+
+.blur {
+	filter: blur(1px);
+}
+
+label {
+	color: #333;
+}
+
+section.main {
+	color: #333;
+}
+
+.myrocket {
+	margin-bottom: 40px;
+}
+
+#nothankyou-form img.img-responsive {
+	max-height: 300px;
+}
+
+#register .form-control {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#myrocketlisting {
+	padding-bottom: 40px;
+	padding: 150px 0 100px 0;
+}

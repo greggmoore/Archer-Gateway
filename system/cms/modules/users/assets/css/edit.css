@@ -1,0 +1,61 @@
+.zipcodes h4 {
+	border-bottom: 1px #ccc dotted;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.zipcodes textarea.form-control {
+	margin-top: 12px;
+	margin-bottom: 0px;
+	border: 1px #ccc solid;
+	height: 260px;
+	background: #FAFAFA;
+}
+
+.zipcodes textarea.form-control:focus {
+	background: #F0F8FF;
+}
+
+
+.checkbox label i b {
+	color: #04519A;
+	font-weight: normal;
+}
+
+#activezips {
+	height: 270px;
+	overflow: scroll;
+	margin-bottom: 10px;
+}
+
+#activezips .alert {
+	margin-top: 20px;
+}
+
+
+.zipStats {
+	width: 100%;
+	overflow: hidden;
+	padding: 0 10px 5px 10px;
+	margin: 0;
+	border-bottom: 1px #ccc dotted;
+}
+
+.zipStats ul,
+.zipStats ul li {
+	padding: 0;
+	margin: 0;
+}
+
+.zipStats ul li {
+	list-style-type: none;
+	font-size: 11px;
+	color: #333;
+	display: inline;
+	padding-right: 10px;
+}
+
+.zipStats ul li:first-child {
+	border-right: 1px #ccc solid;
+	margin-right: 8px;
+}

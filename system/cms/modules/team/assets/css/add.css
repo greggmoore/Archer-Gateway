@@ -1,0 +1,6 @@
+.form-material .form-control, 
+.form-material .form-control.focus, 
+.form-material .form-control:focus {
+	border: 1px solid rgba(120, 130, 140, .25);
+	padding: 5px 0 0 20px;
+}

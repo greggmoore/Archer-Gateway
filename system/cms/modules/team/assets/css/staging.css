@@ -1,0 +1,315 @@
+/*-----------------------------------------------
+  HEADER OVERRIDE
+----------------------------------------------- */
+
+#header {
+	height: 410px;
+	background: rgba(0, 0, 0, 0) url("/data/pages/our-team-header.jpg") no-repeat scroll center center / cover ;
+}
+
+#header h1 {
+	background-color: rgba(255, 129, 0, 0.95);
+} 
+
+#header .content {
+	background-color: rgba(255, 108, 0, 0.75);
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+#header .content h2 {
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 46px;
+}
+
+
+/*-----------------------------------------------
+  OUR HISTORY - SECTION
+----------------------------------------------- */
+#our-history {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+	background-color: #eaf3f7;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+#our-history p {
+	line-height: 1.5em;
+}
+
+#our-history .lge-bg {
+	min-height: 300px;
+	background: rgba(1, 25, 41, 1) url("/data/pages/team-our-history-lge-background.jpg") no-repeat center top / cover ;	
+}
+
+#our-history h2 {
+	font-weight: 400;
+}
+
+#our-history a:link,
+#our-history a:visited {
+	color: #ff8600;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/*-----------------------------------------------
+  EXCEPTIONAL PEOPLE AND CULTURE - SECTION
+----------------------------------------------- */
+
+#exceptional-people-culture {
+	color: #fff;
+	background: #040404; /* Old browsers */
+	background: -moz-linear-gradient(top,  #040404 0%, #040e14 50%, #052133 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #040404 0%,#040e14 50%,#052133 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #040404 0%,#040e14 50%,#052133 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040404', endColorstr='#052133',GradientType=0 ); /* IE6-9 */
+
+}
+
+#exceptional-people-culture h2 {
+	font-weight: 300;
+}
+
+/*-----------------------------------------------
+  EXECUTIVES, DIRECTORS & FOUNDERS - SECTION
+----------------------------------------------- */
+
+#executive-leadership {}
+
+.editas-tabs > .nav.nav-tabs {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 22px;
+    border: none;
+}
+
+.editas-tabs > .nav.nav-tabs > li {
+    display: table-cell;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.editas-tabs > .nav.nav-tabs > li > a {
+    text-align: center;
+    border: 2px #ff8100 solid;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ff8100;
+    padding: 10px 12px;
+    transition: all .3s ease-in-out;
+}
+
+.editas-tabs > .nav.nav-tabs > li > a:hover {
+	background-color: rgba(255,129,0, 0.6);
+	border-color: rgba(255,129,0, 0.6);
+	transition: all .3s ease-in-out;
+	color: #fff;
+}
+
+.editas-tabs .nav-tabs > li.active > a, 
+.editas-tabs .nav-tabs > li.active > a:focus, 
+.editas-tabs .nav-tabs > li.active > a:hover {
+	border-color: #ff8100;
+	background: #ff8100;
+	color: #fff;
+}
+
+.editas-tabs .tab-content {
+	padding: 50px 0;
+	border-top: 1px #131c24 solid;
+
+}
+
+.team {
+	cursor: pointer;
+	margin-bottom: 60px;
+}
+
+.team .img-wrapper {
+	position: relative;
+	max-width: 354px;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.team .img-wrapper img {
+	padding: 8px 0 0 0;
+	margin: 0;
+}
+
+.title-box {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 26px 20px 20px 30px;
+	color: #fff;
+	background-color: rgba(28,33,40, 0.85);
+}
+
+.title-box dl {
+	padding: 0;
+	margin: 0;
+}
+
+.title-box dl dt {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.title-box dl dd {
+	font-size: 15px;
+}
+
+body section .container .team p {
+	font-size: 16px;
+	line-height: 1.7em;
+}
+
+p.read-more {
+	color: #ff8100;
+	font-weight: 600;
+}
+
+p.read-more:hover {
+	color: #333;
+}
+
+
+.credentials {
+	font-style: italic;
+	font-size: 14px;
+}
+
+.team.no-pointer {
+	cursor: default;
+}
+
+/*-----------------------------------------------
+  TEAM MODAL
+----------------------------------------------- */
+
+.modal-body .team {
+	cursor: pointer;
+	margin-bottom: 0;
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.modal-body .title-box {
+	padding: 10px 15px;
+}
+
+.modal-footer {
+	border: none;
+	padding: 60px 40px 40px 100px;
+}
+
+.modal-body .img-wrapper ,
+.modal-body .img-wrapper img {
+	max-width: 100%;
+	width: 100%;
+}
+
+a.close-modal:link,
+a.close-modal:visited {
+	color: #ff8100;
+}
+
+a.close-modal:hover {
+	text-decoration: none;
+	color: #333;
+}
+
+/*==========  Mobile First Method  ==========*/
+	
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	#our-history .left-col {
+		padding: 20px;
+	}
+}
+
+@media only screen and (min-width : 480px) {
+	#header {
+		height: 638px;
+	}
+	
+	.editas-tabs > .nav.nav-tabs > li {
+	    float: none;
+	    display: table-cell;
+	    width: 100%;
+	    margin-bottom: 0;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	#our-history .left-col {
+		padding: 40px 40px;
+	}
+	
+	#our-history .lge-bg {
+		background: rgba(1, 25, 41, 1) url("/data/pages/team-our-history-lge-background.jpg") no-repeat right top / cover ;	
+	}
+	
+	.row-eq-height {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display:         flex;
+	}
+
+	.modal-body {
+		padding: 90px 100px 0 100px;
+	}
+	
+	.modal-body .title-box {
+		padding: 26px 20px 20px 30px;
+	}
+	
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.row-eq-height {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display:         flex;
+	}
+	
+	#our-history .left-col {
+		width: 520px;
+	}
+}
+
+@media only screen and (min-width : 1200px) {
+	
+	#our-history .left-col {
+		width: 860px;
+		padding: 85px 80px 85px 280px;
+	}
+	
+	#our-history .lge-bg {
+		background: rgba(1, 25, 41, 1) url("/data/pages/team-our-history-lge-background.jpg") no-repeat center right / cover ;	
+	}
+	
+	.team .img-wrapper {
+		
+		float: left;
+		max-width: 354px;
+		margin-bottom: 30px;
+		margin-right: 40px;
+	}
+	
+}

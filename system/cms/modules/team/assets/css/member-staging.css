@@ -1,0 +1,45 @@
+#member .img-wrapper {
+	position: relative;
+	max-width: 354px;
+	overflow: hidden;
+}
+
+#member .img-wrapper img {
+	padding: 8px 0 0 0;
+	margin: 0;
+}
+
+.title-box {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 26px 20px 20px 30px;
+	color: #fff;
+	background-color: rgba(28,33,40, 0.85);
+}
+
+.title-box dl {
+	padding: 0;
+	margin: 0;
+}
+
+.title-box dl dt {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.title-box dl dd {
+	font-size: 15px;
+}
+
+body section .container #member p {
+	font-size: 16px;
+	line-height: 1.7em;
+}
+
+.divider {
+	padding: 10px 0;
+	margin: 60px 0 20px 0;
+	border-top: 1px solid rgba(0,0,0,0.1);
+}

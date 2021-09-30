@@ -1,0 +1,35 @@
+.pending_records ,
+.pending_records .btn {
+	font-size: 12px;
+}
+
+.table > tbody > tr > td, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > td, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > thead > tr > th {
+	padding: 10px 5px;
+}
+
+h4.pr4:first-child {
+	margin-top: 0;
+}
+
+h4.pr4 {
+}
+
+h3.pending {
+	border-bottom: 1px  solid rgba(120, 130, 140, 0.13);
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+}
+
+#dashboard .panel .panel-body {
+	padding: 0 0 40px 0;
+}
+
+
+.panel .panel-heading .panel-title span {
+	font-size: 11px;
+}

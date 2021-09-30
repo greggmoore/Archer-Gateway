@@ -1,0 +1,55 @@
+.page-mod-telephone {
+	margin-top: 1rem;
+}
+
+.page-mod-telephone a {
+	font-size: 3em;
+	color: #008ED3;
+	font-weight: bold;
+}
+
+.help-block {
+	color: #cc0000 ;
+}
+
+.btn-primary {
+	margin-top: 20px;
+}
+
+.h2 {
+    font-size: 2.0rem;
+    letter-spacing: -.0415rem;
+}
+
+/*-----------------------------------------------
+  MAP
+----------------------------------------------- */
+
+#location-map {
+	padding: 0;
+	margin: 0;
+}
+
+
+
+@media (max-width: 576px) { 
+	.h1 {
+		font-size: 4rem;
+		letter-spacing: -.063rem;
+	}
+	
+	.h2 {
+		font-size: 1rem;
+	}
+	
+	.btn {
+		display: block;
+		width: 100%;
+	}
+	
+	.page-mod-telephone a {
+		font-size: 2.5em;
+		color: #008ED3;
+		font-weight: bold;
+	}
+}

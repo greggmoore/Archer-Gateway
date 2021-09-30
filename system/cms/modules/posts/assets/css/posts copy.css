@@ -1,0 +1,108 @@
+.intro {
+	padding: 100px 0 0 0;
+}
+
+.author-intro {
+	
+	padding: 80px 0 20px 0;
+}
+
+.author {
+	border-bottom: 1px solid #082d48;
+	padding: 0 0 40px 0;
+}
+
+.h2.subpage-title {
+	font-size: 2.5rem;
+	color: #082d48;
+}
+
+
+.posts h2 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.posts h2 a {
+	color: #333;
+}
+.posts h2 a:link,
+.posts h2 a:visited {}
+
+.posts h2 a:hover {
+	text-decoration: none;
+	color: #006699;
+}
+
+.post-wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+
+.post_meta {
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+
+.post_meta a ,
+.more-link-wrap a {
+	color: #006699;
+	
+}
+
+.post_meta a:link,
+.post_meta a:visited {
+	color: #006699;
+}
+
+.post_meta a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+article .article__title h1.h2 {
+    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+
+}
+
+
+
+.article__body a {
+	color: #4a90e2;
+	font-weight: 700;
+	
+}
+
+.article__body a.btn {
+	color: #fff;
+	
+}
+
+p + a:not(.btn) {
+	font-size: 1em;
+}
+
+.divider {
+	border-top: 1px solid #ececec;
+	padding: 30px 0;
+	margin-top: 30px;
+}
+
+a.back {
+	font-size: 18px;
+	
+}
+
+span.date {
+	color: #00478C;
+	font-size: 14px;
+}
+
+.article__body img {
+	margin: 20px 0;
+	
+}

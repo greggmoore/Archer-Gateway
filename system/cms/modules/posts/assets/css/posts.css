@@ -1,0 +1,28 @@
+.blog-content a:link,
+.blog-content a:visited {
+	color: rgba(0,90,156, 1);
+	text-decoration: underline;
+}
+.blog-content a:hover {
+	color: rgba(0,90,156, 1);
+	text-decoration: none;
+	color: rgba(0,90,156, 0.7);
+}
+
+.blog-content ul,
+.blog-content ol {
+	margin-bottom: 20px;
+}
+
+.blog-content ul li,
+.blog-content ol li {
+	margin-bottom: 10px;
+}
+
+.blog-content ol.decimal {
+	list-style-type: decimal;
+}
+
+.blog-content h3 {
+	margin: 20px 0;
+}
