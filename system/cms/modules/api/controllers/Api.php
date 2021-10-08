@@ -20,13 +20,17 @@ require APPPATH.'/libraries/REST_Controller.php';
 class Api extends REST_Controller
 {
 	
-	
+	public function __construct()
+	{
+	    header('Access-Control-Allow-Origin: *');
+	    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+	    parent::__construct();
+	}
 	
 	 /** Posts **/
     function index_get()
     {
 	  $params = $this->input->get();
-	   
 	   
 	  	if(!empty($params['phone']))
 	  	{
@@ -34,19 +38,34 @@ class Api extends REST_Controller
 		  	unset($params['X-API-KEY']);
 		  	//Collecting parameters
 		  	$params = $this->input->get();
-		  	//Gather client info
-		  	$params = $this->api_m->get_client($params);
-		  	//Fire Away!
 		  	
+		  	if(count($params) != 0)
+		  	{
+			  	//Gather client info
+			  	$params = $this->api_m->get_client($params);
+			  	
+			  	//echo '<pre>';
+			  	//print_r($params); exit();
+			  	//Fire Away!
+			     $response = $this->five9_m->addRecordToList($params);
+			     
+			     $response = json_encode($response);
+			     
+			     $this->response($response, 200);
+		  	}
+		  		else
+		  	{
+			  	$response['success'] = FALSE;
+				$response = json_encode($response);
+				$this->response($response, 200);
+		  	}
 		  	
-		     $response = $this->five9_m->addRecordToList($params);
-		     
-		     $this->response($response, 200);
 		    
 	  	}
 	  		else
 	  	{
 		  	 $response['success'] = FALSE;
+		  	 $response = json_encode($response);
 		  	 $this->response($response, 200);
 	  	}
 	  	
